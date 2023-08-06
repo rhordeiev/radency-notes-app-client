@@ -1,0 +1,71 @@
+table {
+  width: 60vw;
+  height: fit-content;
+  border-collapse: collapse;
+  border-radius: var(--border-radius);
+  transition: all 1s;
+  transform: translateX(calc(var(--table-margin, 0)));
+  box-shadow: var(--box-shadow);
+  margin: var(--table-inner-margin);
+}
+tr {
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+  justify-content: space-around;
+  border-top: 0.13rem solid var(--table-light-color);
+  transition: all 0.2s;
+}
+tr:hover {
+  background-color: var(--table-light-color);
+}
+thead tr {
+  background-color: var(--main-active-color);
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  border-top: none;
+}
+thead tr:hover {
+  background-color: var(--main-active-color);
+}
+tbody tr:nth-child(1) {
+  border-top: none;
+}
+th,
+td {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.4rem;
+  text-align: center;
+}
+th {
+  color: white;
+}
+td button {
+  background-color: transparent;
+  border: none;
+  padding: 0.2rem;
+}
+td button:hover {
+  cursor: pointer;
+}
+td button svg path {
+  transition: all 0.2s;
+}
+td * {
+  overflow-y: hidden;
+}
+td .archive-button:hover svg path {
+  fill: var(--archive-color);
+}
+td .edit-button:hover svg path {
+  fill: var(--edit-color);
+}
+td .delete-button:hover svg path {
+  fill: var(--delete-color);
+}
+td .unarchive-button:hover svg path {
+  fill: var(--unarchive-color);
+}
